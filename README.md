@@ -19,6 +19,7 @@ A small React client for sending and receiving text messages through [GREEN-API]
 
 For development, I used Bun as the package manager and test runner.
 Therefore, Bun is required to run the **tests**.
+However, you can use npm, pnpm, or bun to install dependencies and run the project.
 
 ```sh
 npm install
