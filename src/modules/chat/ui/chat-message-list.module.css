@@ -1,0 +1,20 @@
+.Messages {
+  --max-content-width: 732px;
+
+  display: flex;
+  width: 100%;
+  max-width: var(--max-content-width);
+  min-height: 100%;
+  margin-inline: auto;
+  padding-inline: var(--spacing-l);
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: height 0.2s ease-in;
+}
+
+.EmptyState {
+  margin: auto 0;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  text-align: center;
+}

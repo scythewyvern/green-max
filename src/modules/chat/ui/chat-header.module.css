@@ -1,0 +1,63 @@
+.Header {
+  position: relative;
+  display: flex;
+  gap: 0 var(--spacing-m);
+  align-items: center;
+  padding: var(--spacing-m) var(--spacing-l);
+  border-bottom: 1px solid var(--divider-secondary);
+  background-color: var(--background-primary);
+}
+
+.BackButton {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.BackButton:hover {
+  background: var(--background-secondary, rgb(255 255 255 / 0.08));
+}
+
+.BackButton:focus-visible {
+  outline: 2px solid var(--focus-ring-primary);
+  outline-offset: 2px;
+}
+
+.Avatar {
+  grid-row: 1 / span 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #14b8a6, #2563eb);
+}
+
+.TitleWrapper {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.Name {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text-primary);
+  font: 600 var(--font-body-size) / var(--font-body-line-height) var(--font);
+  letter-spacing: var(--font-body-letter-spacing);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ConnectionStatus {
+  min-width: 0;
+  margin: 2px 0 0;
+  overflow: hidden;
+  color: #fbbf24;
+  font: 400 0.75rem / 1.25 var(--font);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

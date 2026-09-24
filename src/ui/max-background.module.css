@@ -1,0 +1,61 @@
+.Root {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--chat-background-background-step-1);
+}
+
+.Layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.Additional {
+  background:
+    radial-gradient(
+      57.57% 53.61% at 94.4% 14.38%,
+      var(--chat-background-additional-step-1) 0%,
+      var(--chat-background-additional-step-2) 50%,
+      var(--chat-background-additional-step-3) 100%
+    ),
+    radial-gradient(
+      140.37% 51.38% at 0% 80.05%,
+      var(--chat-background-additional-step-4) 0%,
+      var(--chat-background-additional-step-5) 50%,
+      var(--chat-background-additional-step-6) 100%
+    );
+}
+
+.Pattern {
+  --pattern-url: url('/pattern_space.svg');
+
+  background:
+    radial-gradient(
+      57.57% 53.61% at 94.4% 14.38%,
+      var(--chat-background-pattern-step-1) 0%,
+      var(--chat-background-pattern-step-2) 50%,
+      var(--chat-background-pattern-step-3) 100%
+    ),
+    radial-gradient(
+      140.37% 51.38% at 0% 80.05%,
+      var(--chat-background-pattern-step-4) 0%,
+      var(--chat-background-pattern-step-5) 50%,
+      var(--chat-background-pattern-step-6) 100%
+    ),
+    linear-gradient(
+      28deg,
+      var(--chat-background-pattern-gradient-step-1) 8.03%,
+      var(--chat-background-pattern-gradient-step-2) 91.51%
+    );
+  mask-image: var(--pattern-url);
+  mask-position: center;
+  mask-size: auto;
+  mask-repeat: repeat;
+  -webkit-mask-image: var(--pattern-url);
+  -webkit-mask-position: center;
+  -webkit-mask-size: auto;
+  -webkit-mask-repeat: repeat;
+}

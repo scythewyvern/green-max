@@ -1,0 +1,124 @@
+.Bubble {
+  background: linear-gradient(
+    239deg,
+    var(--bubbles-background-bubble-gradient-step-1) 0%,
+    var(--bubbles-background-bubble-gradient-step-2) 50%,
+    var(--bubbles-background-bubble-gradient-step-3) 100%
+  );
+
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  border-top-right-radius: var(--border-radius-local-bubble-regular);
+  border-bottom-right-radius: var(--border-radius-local-bubble-regular);
+
+  width: min-content;
+  max-width: 70%;
+  transition:
+    border-radius 0.2s ease-in,
+    opacity 0.25s ease;
+  margin: var(--spacing-common-2xs-half) 0;
+}
+
+.Bubble[data-variant='outgoing'] {
+  --bubbles-background-bubble-gradient-step-1: #8849b4;
+  --bubbles-background-bubble-gradient-step-2: #735acd;
+  --bubbles-background-bubble-gradient-step-3: #5d6ae5;
+
+  margin-inline-start: auto;
+  border-top-right-radius: var(--border-radius-local-bubble-stack-corner);
+  border-bottom-right-radius: var(--border-radius-local-bubble-stack-corner);
+  border-top-left-radius: var(--border-radius-local-bubble-regular);
+  border-bottom-left-radius: var(--border-radius-local-bubble-regular);
+}
+
+.Bubble[data-variant='outgoing'][data-first] {
+  border-top-right-radius: var(--border-radius-local-bubble-regular);
+}
+
+.Bubble[data-variant='outgoing'][data-last] {
+  border-bottom-right-radius: var(--border-radius-local-bubble-regular);
+  margin-bottom: var(--spacing-common-xs);
+}
+
+.Bubble[data-variant='incoming'][data-first] {
+  border-top-left-radius: var(--border-radius-local-bubble-regular);
+}
+
+.Bubble[data-variant='incoming'][data-last] {
+  border-bottom-left-radius: var(--border-radius-local-bubble-regular);
+  margin-bottom: var(--spacing-common-xs);
+}
+
+.Bubble[data-status='sending'] {
+  opacity: 0.6;
+}
+
+.RetryButton {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #ffc4cd;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.RetryButton:focus-visible {
+  outline: 2px solid #61b5ff;
+  outline-offset: 2px;
+}
+
+.BubbleContent {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding-block-start: var(--spacing-common-s);
+  padding-block-end: var(--spacing-common-m-half);
+  padding-inline: var(--spacing-common-m-half);
+}
+
+.Time {
+  color: var(--bubbles-text-time);
+  font: 400 var(--font-bubble-tag-size) / var(--font-bubble-tag-line-height) var(--font);
+  letter-spacing: var(--font-bubble-tag-letter-spacing);
+  display: inline-flex;
+  position: absolute;
+  bottom: var(--spacing-common-xs);
+  right: var(--spacing-common-m-half);
+}
+
+.MessageText {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  width: max-content;
+  max-width: 100%;
+  font: 400 var(--font-markdown-message-base-size) /
+    var(--font-markdown-message-base-line-height) var(--font);
+  letter-spacing: var(--font-markdown-message-base-letter-spacing);
+  user-select: text;
+
+  &::after {
+    content: attr(data-meta);
+    display: inline-block;
+    color: var(--bubbles-text-time);
+    font: 400 var(--font-bubble-tag-size) / var(--font-bubble-tag-line-height) var(--font);
+    letter-spacing: var(--font-bubble-tag-letter-spacing);
+    visibility: hidden;
+    margin-left: var(--size-4);
+  }
+}
+
+@media (max-width: 600px) {
+  .Bubble {
+    max-width: 82%;
+  }
+}
