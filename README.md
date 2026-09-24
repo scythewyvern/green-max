@@ -4,10 +4,12 @@ A small React client for sending and receiving text messages through [GREEN-API]
 
 ## Demo
 
+![Demo video](public/demo.gif)
+
 [![Login screen](public/screenshot-login.jpg)](public/demo.mp4)
 [![Chat screen](public/screenshot-chat.jpg)](public/demo.mp4)
 
-[Watch the demo video](public/demo.mp4)
+[Download the demo video](public/demo.mp4)
 
 ## Requirements
 
