@@ -2,6 +2,8 @@
 
 A small React client for sending and receiving text messages through [GREEN-API](https://green-api.com/max) in MAX.
 
+![Chat screen](docs/screenshot-login.jpg)
+
 ## Requirements
 
 - Bun
