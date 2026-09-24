@@ -9,8 +9,6 @@ A small React client for sending and receiving text messages through [GREEN-API]
 [![Login screen](public/screenshot-login.jpg)](public/demo.mp4)
 [![Chat screen](public/screenshot-chat.jpg)](public/demo.mp4)
 
-[Download the demo video](public/demo.mp4)
-
 ## Requirements
 
 - Bun
@@ -19,8 +17,14 @@ A small React client for sending and receiving text messages through [GREEN-API]
 
 ## Setup
 
+For development, I used Bun as the package manager and test runner.
+Therefore, Bun is required to run the **tests**.
+
 ```sh
+npm install
+pnpm install
 bun install
+
 cp .env.example .env
 ```
 
@@ -41,18 +45,12 @@ Before testing notifications in GREEN-API:
 ## Run
 
 ```sh
+npm run dev
+pnpm run dev
 bun run dev
 ```
 
 Then open the local URL, sign in, enter a recipient phone number, and send a message.
-
-## Verify
-
-```sh
-bun run check
-```
-
-This runs formatting, linting, typechecking, tests, and the production build.
 
 ## Routes
 
